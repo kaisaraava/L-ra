@@ -1,0 +1,708 @@
+/* reset browser css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /*main*/
+  html,
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7em;
+  }
+  html {
+    scroll-behavior: smooth;
+}
+  a {
+    color: #7E8BE8;
+    text-decoration: none;
+    padding-left: 20px;
+  }
+  h1,
+  h2,
+  h3 {
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+  /* .text-primary style */
+.text-primary {
+  color: #f7c08a;
+  font-size: 3rem;  /* Veidi suurem tekst, et oleks lugemiseks mugav */
+  line-height: 1.6em; /* Parandab ridade vahelist kaugust */
+}
+
+/* Telefoni vaade (max-width: 768px) */
+@media (max-width: 768px) {
+  .text-primary {
+    font-size: 0.7em; /* Veel suurem tekst väikestes ekraanides */
+    padding: 0 10px; /* Lisab väikesed ääred, et tekst ei puutuks ekraani servaga kokku */
+    text-align: center; /* Keskendab teksti väiksemates ekraanides */
+  }
+}
+
+  
+  .bg-dark {
+    background: #7E8BE8;
+    color: #fff;
+  }
+  .py-30 {
+    padding: 30px 0;
+  }
+
+  /* Ostukorvi kast */
+.cart {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100vh;
+  background: #7E8BE8;
+  color:#fff;
+  box-shadow: -2px 0 5px #8991cd;
+  transition: right 0.3s ease-in-out;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.button {
+  display: inline-block;
+  font-size: 18px;
+  position: fixed; /* Kasutab fikseeritud positsiooni */
+  bottom: 30px; /* Paigutab nupu 20px kaugusele alt */
+  background: #D0CAE2;
+  color: #000;
+  border-radius: 5px;
+  padding: 13px 20px;
+  cursor: pointer;
+  position: absolute; /* Alguses ei ole fikseeritud positsioon */
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: #000;
+  background: #E1F2B9;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.cart-item button {
+  background: #7E8BE8;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.cart-item button:hover {
+  background: #5a6bc7;
+}
+
+
+/* Kui aktiivne, tuleb nähtavale */
+.cart.active {
+  right: 0;
+}
+
+/* Sulgemisnupp */
+#close-cart {
+  font-size: 24px;
+  position: absolute;  /* Asetab nupu absoluutsetesse koordinaatidesse */
+  top: 20px;  /* Asetab nupu ülespoole */
+  right: 20px;  /* Asetab nupu paremale */
+  cursor: pointer;
+}
+
+/*meist */
+#meist {
+  background-color: #F4E1E4;
+  color: #5EC193;
+  height: 400px;
+  padding: 70px 20px 30px; height: 600px;
+}
+
+#meist .meist-content {
+  float: right;
+  height: 100%;
+  padding: 165px 50px 30px;
+  font-size: 24px;
+  text-align: center;
+  align-items: center;
+  overflow: hidden;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+  /* navbar */
+  #navbar {
+    background: #7E8BE8;
+    color: #fff;
+    overflow: auto;
+  }
+  #navbar a {
+    color: #fff;
+  }
+  #navbar ul {
+    float: right;
+    list-style: none;
+  }
+  #navbar ul li {
+    float: left;
+  }
+  #navbar ul li a {
+    display: block;
+    padding: 20px;
+    text-align: center;
+  }
+  #navbar ul li a:hover{
+    background: #7E8BE8;
+    color: #f7c08a;
+  }
+  #navbar h1 {
+    padding-top: 20px;
+    float: left;
+  }
+  
+  /*showcase */
+  #vitriin {
+    background-color: #F4E1B9;
+    color: #7E8BE8;
+    text-align: left;
+    height: 500px;
+    font-size: 24px;
+  text-align: center;
+  align-items: center;
+    padding: 80px 20px 30px;
+
+  }
+  
+ #showcase {
+    background-color: #F4E1B9;
+    color: #7E8BE8;
+    text-align: center;
+    padding: 70px 20px 30px;
+    height: 100vh;  /* Kasutab kogu ekraani kõrgust */
+    display: flex;
+    justify-content: center;  /* Keskendab horisontaalselt */
+    align-items: center;  /* Keskendab vertikaalselt */
+    flex-direction: column; /* Aitab paigutada kõik elemendid veergu */
+  }
+  
+  #showcase .showcase-content {
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    max-width: 800px; /* Soovitame paigutada sisu maksimaalsesse laiusse */
+    overflow: visible;  /* Veenduge, et üleliigne tekst oleks nähtav */
+  }
+  
+  #showcase .showcase-content h1 {
+    font-size: 30px;
+    line-height: 1.2em;
+    margin: 0;
+    padding-bottom: 15px; /* Lisame väikese vahe päise ja sisu vahele */
+  }
+  
+  #showcase .showcase-content p {
+    padding-bottom: 20px;
+    line-height: 1.7em;
+    margin: 0;
+  }
+  
+  /* navbar */
+#navbar {
+    background: #7E8BE8;
+    color: #fff;
+    overflow: auto;
+  }
+  #navbar a {
+    color: #fff;
+  }
+  #navbar ul {
+    float: right;
+    list-style: none;
+  }
+  #navbar ul li {
+    float: left;
+  }
+  #navbar ul li a {
+    display: block;
+    text-align: center;
+  }
+  #navbar ul li a:hover{
+    background: #7E8BE8;
+    color: #f7c08a;
+  }
+  #navbar h1 {
+    padding-top: 20px;
+    float: left;
+  }
+  
+  
+/*showcase */
+#showcase {
+  background-color: #F4E1B9;
+  color: #7E8BE8;
+  text-align: left;
+  padding: 70px 20px 30px; height: 600px;
+}
+#showcase .showcase-content {
+  color: #fff;
+  text-align: left;
+    font-size: 18px;
+  margin-bottom: 20px;
+}
+#showcase .showcase-content h1 {
+  font-size: 30px;
+  line-height: 1.2em;
+  text-align: left;
+}
+#showcase .showcase-content p {
+  padding-bottom: 20px;
+  line-height: 1.7em;
+}
+
+/*info */
+#info {
+  height: 400px;
+}
+
+#info .info-content {
+  float: right;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  padding: 50px 30px;
+  overflow: hidden;
+}
+#info .info-content p {
+  padding-bottom: 30px;
+}
+#info .info-img {
+  float: left;
+  width: 50%;
+  background: url("../img/photo-1.jpg") no-repeat;
+  min-height: 100%;
+}
+
+/* features */
+#features .box {
+  float: left;
+  width: fit-content;
+  padding: 50px;
+  text-align: center;
+}
+#features .box i {
+  margin-bottom: 10px;
+}
+/* footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #D0CAE2;
+    font-size: 16px;
+  color: #fff;
+}
+/* clear */
+.clear {
+  clear: both;
+}
+/* about */
+/* #about-info {
+    height: auto;
+} */
+#about-info .info-left {
+  float: left;
+  width: 50%;
+  min-height: 100%;
+}
+#about-info .info-rigth {
+  float: right;
+  width: 50%;
+  min-height: 100%;
+}
+#about-info .info-rigth img {
+  display: block;
+  margin: auto;
+  width: 70%;
+  border-radius: 50%;
+}
+/* testimonials */
+#testimonials {
+  height: 600px;
+  background: url("../img/test-bg.jpg") no-repeat center center/cover;
+}
+#testimonials h2 {
+  color: #fff;
+  text-align: center;
+}
+#testimonials .testimonial {
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  opacity: 0.9;
+}
+#testimonials .testimonial img {
+  width: 70px;
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+/* contact */
+#contact-form .form-group {
+  margin-bottom: 20px;
+}
+#contact-form .form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+#contact-form .form-group input,
+#contact-form .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+#contact-form .form-group textarea {
+  height: 200px;
+}
+#contact-form .form-group input:focus,
+#contact-form .form-group textarea:focus {
+  outline: none;
+  border-color: #f7c08a;
+}
+#contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Keskendab ja jaotab kastid */
+  padding: 20px;
+  overflow: hidden; /* Väldib ülevoolu */
+}
+
+#contact-info .box {
+  flex: 1 1 30%; /* Annab iga kasti jaoks dünaamilise laiuse */
+  max-width: 30%; /* Takistab ülemäärast paisumist */
+  padding: 30px;
+  text-align: center;
+  border-bottom: #7E8BE8 dotted 1px;
+}
+#contact-info .box i {
+  margin-bottom: 10px;
+}
+
+/* Telefoni vaates kontaktikastide parandamine */
+@media (max-width: 768px) {
+  #contact-info {
+    flex-direction: column; /* Muudab paigutuse vertikaalseks */
+    align-items: center;
+  }
+
+  #contact-info .box {
+    max-width: 100%; /* Võtab kogu laiuse */
+    flex: none;
+  }
+}
+
+/* Tooted section */
+#tooted {
+  background-color: #E9DAF4;
+  color: #7E8BE8;
+  padding: 70px 40px 30px;
+  text-align: left;
+  min-height: 600px; /* Changed from fixed height to min-height */
+  box-sizing: border-box; /* Prevents padding from affecting total size */
+}
+
+/* Card container layout */
+.card-container {
+  display: flex;
+  justify-content: space-around; /* Space between cards */
+  flex-wrap: wrap; /* Ensures responsiveness, moves cards to new lines if needed */
+  gap: 20px; /* Adds space between cards */
+  max-width: 1200px; /* Optional: to prevent cards from becoming too wide on large screens */
+  margin: 0 auto; /* Centers the card container */
+}
+
+/* Styling for individual cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #F4E1B9;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  width: 200px; /* Width of each card */
+  max-width: 100%; /* Prevents cards from overflowing */
+  margin: 0 auto; /* Centers cards within the container */
+}
+
+.price {
+  color: #7E8BE8;
+  padding-bottom: 10px;
+  font-size: 22px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #fff;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #7E8BE8;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+.card img {
+  width: 200px;
+  border: 3px solid #7E8BE8;
+  border-radius: 5px;
+  transition: border 0.3s ease-in-out;
+}
+
+/* Ensure responsive behavior for smaller screens */
+@media (max-width: 768px) {
+  .card-container {
+    justify-content: center; /* Center the cards on small screens */
+  }
+  .card {
+    width: 90%; /* Make cards smaller on mobile */
+  }
+}
+
+/* tiim */
+#tiim {
+  background-color: #E1F2B9;
+  color: #7E8BE8;
+  text-align: left;
+  height: 1060px;
+  padding: 70px 40px 30px;
+}
+#features .box {
+  float: left;
+  width: fit-content;
+  padding: 50px;
+  text-align: center;
+}
+#features .box i {
+  margin-bottom: 10px;
+}
+
+/* Styling for the card container */
+.card-container {
+  display: flex;  /* Use flexbox to align items */
+  justify-content: space-around; /* Distribute cards evenly */
+  gap: 20px; /* Optional: space between cards */
+  flex-wrap: wrap; /* Allow wrapping of cards */
+  padding: 20px; /* Add padding around the container */
+}
+
+/* Styling for each card */
+.card {
+  border: 1px solid #ddd; /* Add a border to the card */
+  padding: 15px; /* Add padding inside the card */
+  text-align: center; /* Center align the text */
+  width: 220px; /* Set a fixed width for the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+  border-radius: 8px; /* Slightly rounded corners */
+}
+
+/* Add to the existing media query for mobile devices */
+@media (max-width: 768px) {
+  .card-container {
+    display: flex;
+    flex-direction: column; /* Stack the cards vertically */
+    align-items: center; /* Center align the cards */
+  }
+}
+
+.card img {
+  max-width: 100%; /* Ensure images are responsive */
+  height: auto;
+}
+
+button {
+  background-color: #f7c08a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #f7c08a;
+  color: white;
+}
+
+/* mobile */
+/* General Navbar Styles */
+#navbar {
+  background: #D0CAE2;
+  color: #fff;
+  padding: 15px 0;
+  width: 100%;
+}
+
+#navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+#navbar h1 a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+#navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar ul li {
+  margin: 0 10px;
+}
+
+#navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  font-size: 1.1rem;
+}
+
+#navbar ul li a:hover{
+  background: #7E8BE8;
+  color: #f7c08a;
+  border-radius: 5px;
+}
+
+/* Mobile-Specific Styles */
+@media (max-width: 768px) {
+  #navbar .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #navbar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  #navbar ul li {
+    margin: 0 10px;
+  }
+
+  #navbar ul li a {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    padding: 10px;
+  }
+}
+/* showcase */
+#showcase {
+height: 100%;
+}
+#showcase .showcase-content {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+#info {
+  height: 500px;
+}
+#info .info-img {
+  display: none;
+}
+#info .info-content {
+  float: none;
+  width: 100%;
+}
+/* features */
+#features .box {
+float: none;
+width: 100%
+}
+#about-info .info-left,
+#about-info .info-rigth {
+  float: none;
+  width: 100%;
+}
+#about-info .info-rigth {
+margin-top: 30px;
+}
+#about-info .info-left h1 {
+  text-align: center;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 75px;
+  left: 50%;  /* Paigutab nupu keskele */
+  transform: translateX(150%);  /* Liigutab nupu täpselt keskele */
+  display: none; /* Alguses peidus */
+  background-color:#7E8BE8;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Telefoni vaade (max 768px ekraanid) */
+@media (max-width: 768px) {
+  #backToTop {
+    bottom: 50px; /* Natuke kõrgemale */
+    right: 20px;  /* Nupp paremale */
+    left: auto;
+    transform: none; /* Eemaldab keskele nihutamise */
+    padding: 8px 12px; /* Väiksem nupp */
+    font-size: 14px;
+  }
+}
+
+#backToTop:hover {
+  background-color: #5c6bc0;
+}
+
+/* contact-info*/
+#contact-form h1,
+#contact-form p{
+  text-align: center;
+}
+#contact-info .box {
+  float: none;
+  width: 33.3%;
+  padding: 50px;
+  text-align: center;
+}
+#contact-info .box {
+  float: none;
+width: 100%;
+  border-bottom: #7E8BE8 dotted 1px;
+}

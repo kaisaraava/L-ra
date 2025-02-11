@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="et">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script
+      src="https://kit.fontawesome.com/3280989f88.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 500px)"
+      href="css/mobile.css"
+    />
+    <title>LÜÜRA | Avaleht</title>
+  </head>
+  <body>
+    <!-- navigatsioon-->
+    <header>
+      <nav id="navbar">
+        <div class="container">
+          <h1><a href="index.html">LÜÜRA</a></h1>
+          <ul>
+            <li><a class="current" href="index.html#meist">Meist</a></li>
+            <li><a href="index.html#tooted">Tooted</a></li> 
+            <li><a href="index.html#tiim">Tiim</a></li>    
+            <li><a href="#" id="cart-icon">Ostukorv</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+      <!-- vitriin-->
+      <div id="vitriin">
+        <div class="container">
+            <div class="showcase-content">
+              <h1><span class="text-primary">LÜÜRA logopeedilised mängud</span></h1>
+              <p>Tee oma lapsejaoks õpimis protsessi lõbusamaks
+                <br>
+                Sinu lapse kõne arenguks! ❤</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="cart" class="cart">
+          <div class="cart-header">
+            <h2>Ostukorv</h2>
+            <span id="close-cart">&times;</span>
+          </div>
+          <div id="cart-items">
+            <ul id="cart-list"></ul>
+          </div>
+          <button class="button">Mine ostma</button>
+        </div>
+
+       <!-- meist-->
+    <section id="meist" class="bg-dark">
+        <div class="meist-content">
+          <h2><span class="text-primary"></span></h2>
+          <p>
+            Lüra, mis on pere ettevõtte, loodi disaineri ja logopeedi poolt. Lüra eesmärk on korrigeerida laste kõnearengut või toetada selle korrektset kujunemist, nii et lapsed ka seda protsessi naudivad sest see on nende jaoks mänguline.
+          </p>
+        </div>
+      </section>
+
+       <!-- tooted -->
+    <section id="tooted">
+      <div class="box bg-light">
+        <h3 style="text-align: center; font-size: 32px;">Meie tooted</h3>
+
+      <style>
+        .card {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          max-width: 200px;
+          max-height: 500px;
+          background-color: #F4E1B9;
+          margin: auto;
+          text-align: center;
+          font-family: arial;
+          border: 1px solid #7E8BE8;
+    border-radius: 5px;
+    transition: border 0.3s ease-in-out;
+        }
+        
+        .price {
+          color: #7E8BE8;
+          padding-bottom: 10px;
+          font-size: 22px;
+        }
+        
+        .card button {
+          border: none;
+          outline: 0;
+          padding: 12px;
+          color: #fff;;
+          background-color: #7E8BE8;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;
+        }
+        
+        .card button:hover {
+          opacity: 0.7;
+        }
+        </style>
+        </head>
+        <body>
+                    <div class="card-container">
+            <div class="card">
+              <img src="/img/SeiklusSiltSile.png" alt="Seiklus S-ilt S-ile" style="width: 200px">
+              <h1>Seiklus S-ilt S-ile</h1>
+              <p class="price">$19.99</p>
+              <button onclick="addToCart('Seiklus S-ilt S-ile', 19.99)">Lisa ostukorvi</button>
+   </div>
+        
+            <div class="card">
+              <img src="img/Rtähemäng.png" alt="R-tähe mäng" style="width: 200px">
+              <h1>R-tähe mäng</h1>
+              <p class="price">$19.99</p>
+              <button onclick="addToCart('R-tähe mäng', 19.99)">Lisa ostukorvi</button>
+            </div>
+          </div>
+        </body>
+        </div>
+      </section>
+
+
+</section>
+    <div class="clear"></div>
+
+    <!-- Tiim -->
+<section id="tiim">
+  <div class="box bg-light">
+    <h3 style="text-align: center; font-size: 32px;">Meie tiim</h3>
+
+    <div class="kaart-container">
+      <div class="kaart">
+        <img src="/img/kaisa.png" alt="Tootmisjuht, illustreeria">
+        <h1 style="color: #fff;">Kaisa Raava</h1>
+        <button>Tootmisjuht, illustreeria</button>
+        <br>
+        <br>
+        <p style="color: #fff">kaisaraava@gmail.com</p>
+      </div>
+
+      <div class="kaart">
+        <img src="img/liili.png" alt="Sisu looja">
+        <h1 style="color: #fff;">Liili Raava</h1>
+        <button>Sisu looja</button>
+        <br>
+        <br>
+        <p style="color: #fff" >liiliraava@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Kaardikonteiner - hoiab kaardid kõrvuti või mobiilis all */
+  .card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Mobiilis lähevad kaardid alla */
+    gap:10px; 
+    padding: 20px;
+  }
+
+ /* Tiimi sektsiooni paigutus */
+.kaart-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px; /* Kasutame suuremat vahet, et kaardid oleksid rohkem eraldi */
+  padding: 20px;
+}
+
+/* Üksiku kaardi stiil */
+.kaart {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 250px;  /* Päris laiuse määramine, et kaardid oleksid ühtlased */
+  background-color: #D7BFFF;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  border: 3px solid #D7BFFF;
+  border-radius: 5px;
+  padding: 20px;
+  transition: border 0.3s ease-in-out;
+}
+
+/* Kaardi pilt */
+.kaart img {
+  width: 100%;
+  min-width: 50px;
+  height: auto;
+  border: 3px solid #D79EEB;
+  border-radius: 5px;
+}
+
+/* Kaardil olev nupp */
+.kaart button {
+  border: none;
+  outline: 0;
+  padding: 10px;
+  color: #7E8BE8;
+  background-color: #fff;
+  text-align: center;
+  cursor: pointer;
+  width: 80%;
+  font-size: 16px;
+  margin-top: 10px;
+  border-radius: 3px;
+}
+
+/* Mobiilivaate kohandused */
+@media (max-width: 600px) {
+  .kaart-container {
+    flex-direction: column;  /* Kaardid liiguvad üksteise alla */
+    align-items: center;
+  }
+
+  .kaart {
+    width: 90%;  /* Kasutab rohkem ekraani laiust */
+    max-width: 320px;
+  }
+
+  .kaart h1 {
+    font-size: 20px;
+  }
+
+  .kaart button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .kaart p {
+    font-size: 14px;
+  }
+}
+
+/* Suurem ekraan */
+@media (min-width: 610px) {
+  .kaart-container {
+    gap: 10px; /* Suurem vahe kaardide vahel suuremõõduline ekraan */
+    flex-direction: row;
+    overflow:hidden;
+  }
+
+  .kaart {
+    width: 250px;  /* Eelmistel määrangutel põhinev suurus */
+  }
+}
+
+</style>
+
+
+        </body>
+        </div>
+      </section>
+
+    </section>
+    <div class="clear"></div>
+
+    <button id="backToTop" style="display: none; position: fixed; bottom: 20px ">
+      ↑ Tagasi üles
+  </button>
+
+    <script>
+      
+    // Ostukorvi objekt toodete hoidmiseks
+let cart = {};
+
+// Funktsioon toote lisamiseks ostukorvi
+function addToCart(productName, price) {
+    if (cart[productName]) {
+        cart[productName].quantity++;
+    } else {
+        cart[productName] = { price: price, quantity: 1 };
+    }
+    updateCart();
+}
+
+
+// Funktsioon ostukorvi sisu uuendamiseks
+function updateCart() {
+    const cartItems = document.getElementById("cart-items");
+    cartItems.innerHTML = ""; // Tühjenda ostukorv enne uuendamist
+
+    Object.keys(cart).forEach(productName => {
+        const item = cart[productName];
+
+        const cartItem = document.createElement("div");
+        cartItem.classList.add("cart-item");
+
+        cartItem.innerHTML = `
+            <span>${productName} - $${item.price.toFixed(2)} x ${item.quantity}</span>
+            <button class="minus-btn" onclick="decreaseQuantity('${productName}')">−</button>
+            <button class="plus-btn" onclick="increaseQuantity('${productName}')">+</button>
+        `;
+
+        cartItems.appendChild(cartItem);
+    });
+}
+
+// Suurenda toote kogust
+function increaseQuantity(productName) {
+    cart[productName].quantity++;
+    updateCart();
+}
+
+// Vähenda toote kogust või eemalda see
+function decreaseQuantity(productName) {
+    if (cart[productName].quantity > 1) {
+        cart[productName].quantity--;
+    } else {
+        delete cart[productName]; // Kui kogus on 0, eemalda toode
+    }
+    updateCart();
+}
+
+// Lisa "Lisa ostukorvi" nuppudele vajutamise funktsioon
+document.querySelectorAll(".card button").forEach((button) => {
+    button.addEventListener("click", () => {
+        const productName = button.parentElement.querySelector("h1").textContent;
+        const price = parseFloat(button.parentElement.querySelector(".price").textContent.replace("$", ""));
+        addToCart(productName, price);
+        alert(`${productName} on lisatud ostukorvi!`);
+    });
+});
+      
+      document.addEventListener('DOMContentLoaded', () => {
+        // Navigeerimise highlightimine
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('#navbar ul li a');
+    
+        window.addEventListener('scroll', () => {
+          let current = '';
+          
+          sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            
+            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+              current = section.getAttribute('id');
+            }
+          });
+    
+          navLinks.forEach(link => {
+            link.classList.remove('current');
+            if (link.getAttribute('href').includes(current)) {
+              link.classList.add('current');
+            }
+          });
+        });
+    
+        // Ostukorvi avamine/sulgemine
+        const cartIcon = document.querySelector('#cart-icon');
+        const cart = document.querySelector('#cart');
+        const closeCart = document.querySelector('#close-cart');
+      
+        // Ostukorvi avamine
+        cartIcon.addEventListener('click', (event) => {
+          event.preventDefault(); // Et link ei viiks kuhugi
+          cart.classList.add('active')
+        });
+      
+        // Ostukorvi sulgemine
+        cart.classList.contains('active')
+        closeCart.addEventListener('click', () => {
+          cart.classList.remove('active');
+        });
+      
+       // Klõps väljaspool ostukorvi sulgeb selle ainult siis, kui ostukorv on nähtaval
+document.addEventListener('click', (event) => {
+  // Kontrollime, kas klikkiti väljaspool ostukorvi ja ostukorv on avatud
+  if (!cart.contains(event.target) && !cartIcon.contains(event.target) && cart.classList.contains('active')) {
+    cart.classList.remove('active');
+  }
+});
+    
+        const cartItems = document.getElementById("cart-items");
+
+  function addToCart(productName, price) {
+        if (!cartItems) {
+            console.error("Ostukorvi elementi ei leitud!");
+            return;
+        }
+
+    }
+    document.querySelectorAll(".card button").forEach((button) => {
+        button.addEventListener("click", () => {
+            const productName = button.parentElement.querySelector("h1").textContent;
+            const price = parseFloat(button.parentElement.querySelector(".price").textContent.replace("$", ""));
+            addToCart(productName, price);
+        });
+    });
+
+
+        // Tagasi üles nupp
+        const backToTop = document.getElementById("backToTop");
+    
+        window.addEventListener("scroll", function () {
+          // Kui kasutaja kerib rohkem kui 300px alla, näita nuppu
+          if (window.scrollY > 1300) {
+            backToTop.style.display = "block";
+          } else {
+            backToTop.style.display = "none";
+          }
+        });
+    
+        // Kui kasutaja vajutab nupule, kerib leht ülesse
+        backToTop.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      });
+      
+    </script>
+
+
+
+      <footer>
+        <p>VOCO &copy;2025, Kõik Õigused On Kaitstud</p>
+      </footer>
+    </body>
+  </html>
